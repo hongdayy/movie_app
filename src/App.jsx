@@ -6,7 +6,7 @@ import NetflixHome from "./components/Netflix/NetflixHome";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ClipLoader from "react-spinners/ClipLoader";
-// import CreateUserContext from "./Store/CreateUserContext";
+import CreateUserContext from "./store-v1/CreateUserContext";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <CreateUserContext> */}
+        <CreateUserContext>
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route
@@ -41,7 +41,7 @@ function App() {
             ></Route>
             <Route path="/login" element={<LoginHome></LoginHome>}></Route>
           </Routes>
-        {/* </CreateUserContext> */}
+        </CreateUserContext>
       </BrowserRouter>
     </div>
   );

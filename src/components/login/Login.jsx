@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import logo from "../../images/logo.png";
 import header from "../../images/netflix-header.jpg";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../../Store/CreateUserContext";
+import { UserContext } from "../../store-v1/CreateUserContext";
 import { actionStates } from "../../UserReducer";
 
 const Login = () => {
