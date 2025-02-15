@@ -18,42 +18,37 @@ const Login = () => {
   });
 
   const handleLogin = () => {
-    // const userValidate = /^[A-Za-z]{4,10}$/i.test(username);
-    // const passwordValidation =
-    //   /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
-    //     password
-    //   );
+    const userValidate = /^[A-Za-z]{4,10}$/i.test(username);
+    const passwordValidation =
+      /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{4,10}$/i.test(
+        password
+      );
 
-    // if (username === "" || password === "") {
-    //   setError({
-    //     ...error,
-    //     username: "Tên người dùng là bắt buộc!",
-    //     password: "Mật khẩu là bắt buộc!",
-    //   });
-    // } else if (!userValidate || !passwordValidation) {
-    //   setError({
-    //     ...error,
-    //     username: "Tên người dùng phải có từ 4-10 ký tự",
-    //     password:
-    //       "Mật khẩu phải có từ 4-10 ký tự và chứa ít nhất 1 chữ cái, 1 ký tự đặc biệt và 1 số",
-    //   });
-    // } else {
-    //   dispatch({
-    //     type: DISPATCH_USER,
-    //     username: username,
-    //     password: password,
-    //     image: image,
-    //   });
-    //   navigate("/netflix");
-    // }
-    // return error;
-    dispatch({
-          type: DISPATCH_USER,
-          username: username,
-          password: password,
-          image: image,
-        });
-        navigate("/netflix");
+    if (username === "" || password === "") {
+      console.log(1)
+      setError({
+        ...error,
+        username: "Tên người dùng là bắt buộc!",
+        password: "Mật khẩu là bắt buộc!",
+      });
+    } else if (!userValidate || !passwordValidation) {
+      console.log(2)
+      setError({
+        ...error,
+        username: "Tên người dùng phải có từ 4-10 ký tự",
+        password:
+          "Mật khẩu phải có từ 4-10 ký tự và chứa ít nhất 1 chữ cái, 1 ký tự đặc biệt và 1 số",
+      });
+    } else {
+      dispatch({
+        type: DISPATCH_USER,
+        username: username,
+        password: password,
+        image: image,
+      });
+      navigate("/netflix");
+    }
+    return error;
   };
 
   return (
