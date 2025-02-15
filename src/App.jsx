@@ -4,8 +4,9 @@ import Home from "./components/home/Home";
 import LoginHome from "./components/login/LoginHome";
 import NetflixHome from "./components/Netflix/NetflixHome";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CreateUserContext from "./Store/CreateUserContext";
+
 import ClipLoader from "react-spinners/ClipLoader";
+import CreateUserContext from "./Store/CreateUserContext";
 
 function App() {
   const [loading, setLoading] = useState(true);
