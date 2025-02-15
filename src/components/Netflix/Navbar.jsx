@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../Store/CreateUserContext";
+import { UserContext } from "../../store-v1/CreateUserContext";
 import NetflixHeader from "./NetflixHeader";
 import { useNavigate } from "react-router-dom";
 import { actionStates } from "../../UserReducer";
