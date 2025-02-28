@@ -2,35 +2,27 @@ import React from "react";
 
 const Body = ({ reverse, title, text, img }) => {
   return (
-    <div>
+    <div className="flex flex-col md:flex-row items-center justify-center w-full bg-black border-b-8 border-neutral-800 p-6 md:p-12">
       {!reverse ? (
-        <div className="flex justify-center w-full items-center bg-black border-b-8 border-neutral-800">
+        <>
           <div className="flex flex-col text-white max-w-lg">
-            <h2 className="font-sans text-4xl text-white font-bold tracking-normal no-underline pb-4">
-              {title}
-            </h2>
-            <p className="text-white font-sans text-2xl font-normal tracking-normal no-underline pb-4">
-              {text}
-            </p>
+            <h2 className="text-4xl font-bold pb-4">{title}</h2>
+            <p className="text-2xl pb-4">{text}</p>
           </div>
-          <div>
-            <img src={img} alt="tv"></img>
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img src={img} alt="tv" className="w-full max-w-md" />
           </div>
-        </div>
+        </>
       ) : (
-        <div className="flex justify-center w-full items-center bg-black border-b-8 border-neutral-800">
-          <div>
-            <img src={img} alt="tv"></img>
+        <>
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img src={img} alt="tv" className="w-full max-w-md" />
           </div>
-          <div className="flex flex-col text-white max-w-lg">
-            <h2 className="font-sans text-4xl text-white font-bold tracking-normal no-underline pb-4">
-              {title}
-            </h2>
-            <p className="text-white font-sans text-2xl font-normal tracking-normal no-underline pb-4">
-              {text}
-            </p>
+          <div className="flex flex-col text-white max-w-lg text-center md:text-left">
+            <h2 className="text-4xl font-bold pb-4">{title}</h2>
+            <p className="text-2xl pb-4">{text}</p>
           </div>
-        </div>
+        </>
       )}
     </div>
   );

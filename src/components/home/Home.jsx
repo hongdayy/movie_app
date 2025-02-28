@@ -13,6 +13,8 @@ const Home = () => {
   return (
     <div className="bg-black">
       <Header />
+
+      {/* Sections */}
       <Body
         img={tv}
         title="Thưởng thức trên TV của bạn."
@@ -35,38 +37,37 @@ const Home = () => {
         title="Tạo hồ sơ cho trẻ em"
         text="Cho trẻ em tham gia những cuộc phiêu lưu với các nhân vật yêu thích trong không gian dành riêng cho chúng - miễn phí với tư cách thành viên của bạn."
       />
-      <div className="bg-black flex flex-col justify-center items-center pt-12 border-b-8 border-neutral-800">
-        <h1 className="font-sans text-5xl text-white font-bold tracking-normal no-underline pb-4">
+
+      {/* FAQ Section */}
+      <div className="bg-black flex flex-col justify-center items-center pt-12 border-b-8 border-neutral-800 px-4">
+        <h1 className="text-3xl md:text-5xl text-white font-bold text-center pb-4">
           Câu Hỏi Thường Gặp
         </h1>
-        <div className="flex flex-col justify-center items-center pt-12">
-          {accordionData.map((item) => {
-            return (
-              <Accordion
-                key={item.id}
-                title={item.title}
-                text={item.text}
-              />
-            );
-          })}
+        <div className="w-full max-w-3xl">
+          {accordionData.map((item) => (
+            <Accordion key={item.id} title={item.title} text={item.text} />
+          ))}
         </div>
-        <div className="pt-12 pb-6">
-          <p className="text-white font-sans text-lg font-normal tracking-normal no-underline pb-4">
+
+        {/* Email Form */}
+        <div className="pt-12 pb-6 text-center">
+          <p className="text-white text-lg md:text-xl pb-4">
             Sẵn sàng để xem? Nhập email của bạn để tạo hoặc khởi động lại
             tư cách thành viên của bạn.
           </p>
-          <div className="flex pb-12 items-center justify-center">
+          <div className="flex flex-col md:flex-row gap-4 w-full max-w-3xl">
             <input
-              className="min-w-[450px] h-16 w-[600px] pl-4 outline-none bordder-0 text-black"
+              className="w-full md:w-[450px] h-14 md:h-16 pl-4 outline-none border-0 text-black"
               placeholder="Địa chỉ email"
             />
-            <button className="bg-red-600 h-16 w-36 text-white text-xl font-sans">
+            <button className="bg-red-600 h-14 md:h-16 w-full md:w-36 text-white text-lg md:text-xl font-bold">
               Bắt Đầu
             </button>
           </div>
         </div>
       </div>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
