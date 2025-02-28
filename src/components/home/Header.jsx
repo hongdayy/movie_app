@@ -50,18 +50,14 @@ const Header = () => {
         <p className="text-white font-sans text-2xl font-normal tracking-normal no-underline pb-4">
           Sẵn sàng xem? Nhập email của bạn để tạo hoặc khôi phục gói thành viên.
         </p>
-        <div className="flex justify-center items-center">
-          <div>
-            <input
-              className="w-[600px] h-16 text-black outline-none border-0 pl-4"
-              placeholder="Nhập email của bạn"
-            ></input>
-          </div>
-          <div>
-            <button className="bg-red-600 h-16 w-36 font-sans text-white cursor-pointer font-bold">
-              Bắt đầu
-            </button>
-          </div>
+        <div className="flex flex-col sm:flex-row justify-center items-center w-full px-4 sm:px-0 gap-4">
+          <input
+            className="w-full sm:w-[600px] h-16 text-black outline-none border-0 pl-4"
+            placeholder="Nhập email của bạn"
+          />
+          <button className="bg-red-600 h-16 w-full sm:w-36 font-sans text-white cursor-pointer font-bold">
+            Bắt đầu
+          </button>
         </div>
       </div>
       <img
