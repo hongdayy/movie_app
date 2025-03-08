@@ -35,9 +35,9 @@ const Login = () => {
       console.log(2)
       setError({
         ...error,
-        username: "Tên người dùng phải có từ 4-10 ký tự",
+        username: "Tên người dùng phải có từ 4-10 ký tự (VD:thuhong), link ảnh ví dụ:https://photo.znews.vn/w660/Uploaded/mdf_eioxrd/2021_07_06/2.jpg",
         password:
-          "Mật khẩu phải có từ 4-10 ký tự và chứa ít nhất 1 chữ cái, 1 ký tự đặc biệt và 1 số",
+          "Mật khẩu phải có từ 4-10 ký tự và chứa ít nhất 1 chữ cái, 1 ký tự đặc biệt và 1 số (VD:Thuhong1!)",
       });
     } else {
       dispatch({
@@ -86,7 +86,7 @@ const Login = () => {
             value={image}
             onChange={(e) => setImagee(e.target.value)}
             type="text"
-            placeholder="Nhập URL hình ảnh đại diện (tùy chọn)"
+            placeholder="Nhập URL hình ảnh  (link ảnh bất kì)"
             className="mb-4 bg-stone-600 w-80 py-3.5 rounded-lg text-white pl-4"
           ></input>
           <div>
@@ -106,7 +106,7 @@ const Login = () => {
             </p>
             <div>
               <p className="text-stone-500 font-sans text-sm font-normal tracking-normal no-underline pb-4 text-left">
-              URL hình ảnh là tùy chọn !!!
+              URL hình ảnh (link ảnh bất kì)
               </p>
             </div>
           </div>
